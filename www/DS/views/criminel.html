@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="criminel.js"></script>
+	<title>criminel</title>
+</head>
+<body class="a1">
+
+	
+	<fieldset >
+		<form method="POST" action="ajoutercriminel.php">
+	<table >
+	<h1>	Ajouter un criminel</h1>
+		<tr>
+			<td>CIN</td>
+			<td><input type="text" name="CIN" id="CIN"></td>
+		</tr>
+		<tr>
+			<td>NOM</td>
+			<td><input type="text" name="NOM" id="NOM"></td>
+		</tr> 
+		<tr>
+			<td>PRENOM</td>
+			<td><input type="text" name="PRENOM" id="PRENOM"></td>
+		</tr>
+		<tr>
+			<td>DATE DE NAISSANCE</td>
+			<td><select>
+				<option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> <option>6</option> <option>7</option> <option>8</option> <option>9</option> <option>10</option></select></td>
+		</tr>
+		<tr> <td></td>
+			<td><input type="button" value="Ajouter" name="ajouter" id="ajout" onclick="ajouter()"></td></tr>
+	</table>
+	</form>
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<?PHP
+include "../Entities/coach.php";
+include "../core/coachC.php";
+if (isset($_POST['id'])){ 
+
+	$coachc=new coachC();
+    $result=$coachc->recuperercoach($_POST['id']);
+	foreach($result as $row){
+		$id=$row['id'];
+		$nomprenom=$row['nomprenom'];
+		$email=$row['email'];
+		$specialite=$row['specialite'];
+		$age=$row['age'];
+		$image=$row['image'];
+		
+?>
+ <form method="POST">
+<table>
+<caption>modifier Coach</caption>
+<tr>
+<td>ID</td>
+<td><input type="text" name="id" value=""<?PHP echo $id ?>"></td>
+</tr>
+<td>NomPrenom</td>
+<td><input type="text" name="nomprenom" value=""<?PHP echo $nomprenom ?>"></td>
+</tr>
+<tr>
+<td>Mail</td>
+<td><input type="email" name="email" value=""<?PHP echo $email ?>"></td>
+</tr>
+
+
+<td>Specialite</td>
+<td><input type="text" name="specialite" value=""<?PHP echo $specialite ?>"></td>
+</tr>
+<td>age</td>
+<td><input type="number" name="age" value=""<?PHP echo $age ?>"></td>
+</tr>
+<tr>
+
+<td>image</td>
+<td>	<label>FILE:</label><input type="file" name="image" />  
+</td>
+</tr>
+<tr>
+<td></td>
+<td><input type="hcinden" name="id" value="<?PHP echo $_POST['id'];?>"></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" name="modifier" value="modifier"></td>
+</tr>
+
+
+
+</table>
+</form> 
+<?PHP
+	
+
+if (isset($_POST['modifier'])){
+	$coach=new coachC($_POST['id'],$_POST['nomprenom'],$_POST['email'],$_POST['age'],$_POST['specialite'],$_POST['age'],$_POST['image']);
+	$coachc->modifiercoach($coach,$_POST['id']);
+	echo $_POST['id'];
+	header('Location: table-datatable1.php');
+}
+}
+}
+?>

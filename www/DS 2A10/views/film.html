@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="film.js"></script>
+	<title>criminel</title>
+</head>
+<body class="a1">
+
+	
+	<fieldset >
+		<form  name="f"method="POST"  onsubmit="return controle()" action="ajouterfilm.php" >
+	<table >
+	<tr> <td class="a3"><h1> 	Ajouter FILM</h1> </td></tr>
+		<tr>
+			<td>REF</td>
+			<td><input type="text" name="ref" id="ref" class="a2"></td>
+		</tr>
+		<tr>
+			<td>Titre</td>
+			<td><input type="text" name="titre" id="titre" class="a2"></td>
+		</tr> 
+		<tr>
+			<td>Description</td>
+			<td><input type="text" name="description" id="description" class="a2"></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td><select type="text" name="type" id="type">
+				<option>Fantastique</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> <option>6</option> <option>7</option> <option>8</option> <option>9</option> <option>10</option></select></td>
+		</tr>
+		<tr><td>Date de Projection class="a2"</td>
+			<td><input type="Date" name="dateprojection" id="dateprojection"></td></tr>
+		<tr> <td></td>
+			<td><button >ajouter</button></td></tr>
+	</table>
+	</form>
+	</fieldset>
+</body>
+</html>
